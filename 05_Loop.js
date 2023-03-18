@@ -28,5 +28,5 @@ var person = {
     city: "New York"
 }
 for (var x in person) {
-    console.log(x)
+    console.log(person[x])
 }
