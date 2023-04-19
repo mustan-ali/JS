@@ -20,6 +20,10 @@ document.querySelector("element1 + element2"); // returns the first element that
 document.querySelectorAll(".selector")[0]; // returns the first element that matches class selector (alternative to querySelector)
 document.querySelector(".text").style.color = "red"; // changes the style of the first element that matches class selector
 
+let element1=document.getElementById("id1");
+id1.matches(".className"); // returns true if the element has the given class
+id1.closest(".className"); // returns element that is the closest ancestor that matches the given class
+id1.contain(element2); // returns true if the element contains the given element
 
 /*
 firstChild  - returns the first child of a node
