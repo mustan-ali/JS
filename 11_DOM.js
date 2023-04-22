@@ -30,6 +30,12 @@ document.getElementById("id").innerText = "new text"; // changes the inner text 
 document.getElementById("id").outerHTML; // returns the outer HTML of the element with the given id (including the element itself)
 document.getElementById("id").outerText = "<p>new text</p>"; // changes the  element with the given id (including the element itself)
 
+element1.hasAttribute("class"); // returns true if the element has the given attribute
+element1.getAttribute("class"); // returns the value of the given attribute
+element1.setAttribute("class", "newClass"); // sets the value of the given attribute
+element1.removeAttribute("class"); // removes the given attribute
+element1.attributes; // returns a list of all attributes of the element
+
 /*
 firstChild  - returns the first child of a node
 lastChild   - returns the last child of a node
