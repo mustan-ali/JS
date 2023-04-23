@@ -36,6 +36,16 @@ element1.setAttribute("class", "newClass"); // sets the value of the given attri
 element1.removeAttribute("class"); // removes the given attribute
 element1.attributes; // returns a list of all attributes of the element
 
+let a = document.getElementsByTagName("div")[0]; // returns the first div element
+a.innerHTML = a.innerHTML + '<p>new text</p>'; // adds a new paragraph to the div element
+let b = document.createElement("div"); // creates a new div element
+b.innerHTML = '<p>new text</p>'; // adds a new paragraph to the div element
+a.append(b); // adds b as the last child of a
+a.prepend(b); // adds b as the first child of a
+a.before(b); // adds b as the previous sibling of a
+a.after(b); // adds b as the next sibling of a
+a.replaceWith(b); // replaces a with b
+
 /*
 firstChild  - returns the first child of a node
 lastChild   - returns the last child of a node
