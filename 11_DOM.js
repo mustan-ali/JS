@@ -46,6 +46,11 @@ a.before(b); // adds b as the previous sibling of a
 a.after(b); // adds b as the next sibling of a
 a.replaceWith(b); // replaces a with b
 
+a.insertAdjacentHTML("beforebegin", '<p>new text</p>'); // adds a new paragraph before a
+a.insertAdjacentHTML("afterend", '<p>new text</p>'); // adds a new paragraph after a
+a.insertAdjacentHTML("afterbegin", '<p>new text</p>'); // adds a new paragraph as the first child of a
+a.insertAdjacentHTML("beforeend", '<p>new text</p>'); // adds a new paragraph as the last child of a
+
 /*
 firstChild  - returns the first child of a node
 lastChild   - returns the last child of a node
