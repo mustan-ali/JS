@@ -51,6 +51,13 @@ a.insertAdjacentHTML("afterend", '<p>new text</p>'); // adds a new paragraph aft
 a.insertAdjacentHTML("afterbegin", '<p>new text</p>'); // adds a new paragraph as the first child of a
 a.insertAdjacentHTML("beforeend", '<p>new text</p>'); // adds a new paragraph as the last child of a
 
+let c = document.getElementById("id1");
+c.classList.add("newClass"); // adds a new class to the element
+c.classList.remove("newClass"); // removes a class from the element
+c.classList.toggle("newClass"); // adds a class to the element if it doesn't exist, otherwise removes it
+c.classList.contains("newClass"); // returns true if the element has the given class
+c.className = "newClass newClass2"; // sets the class of the element
+
 /*
 firstChild  - returns the first child of a node
 lastChild   - returns the last child of a node
