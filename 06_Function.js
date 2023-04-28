@@ -18,6 +18,10 @@ function square(number) {
 }
 console.log(square(2));
 
+//Arrow function ES6
+const square = (number) => number * number;
+const square = (number) => { return number * number };
+
 /*
 Type of function
 No Parameters and no Return value
