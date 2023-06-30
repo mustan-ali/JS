@@ -20,3 +20,39 @@ promise.then(function (message) {
 ).catch(function (message) {
     console.log(message);
 });
+
+
+//Promise Chaining
+//It is used to call multiple promises one after another and each promise is executed after the previous promise is resolved.
+let promise1 = new Promise(function (resolve, reject) {
+    resolve("Promise 1 resolved");
+});
+
+promise1.then(function (result) {
+    console.log(result);
+    let promise2 = new Promise(function (resolve, reject) {
+        resolve("Promise 2 resolved");
+        console.log
+    });
+    return promise2;
+}).then(function (result) {
+    console.log(result);
+});
+
+
+let promise3 = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve(10);
+    }, 2000);
+});
+
+promise3.then(function (result) {
+    console.log(result);    //10
+    return result * 2;
+}).then(function (result) {
+    console.log(result);    //20
+    return result * 3;
+}
+).then(function (result) {
+    console.log(result);    //60
+});
