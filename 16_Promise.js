@@ -65,3 +65,58 @@ let promise4 = new Promise(function (resolve, reject) {
 
 promise4.then((result) => { console.log("Promise 4 " + result); });
 promise4.then((result) => { console.log("P4 " + result); });
+
+
+//Promise API
+//Promise.all() executes multiple promises at the same time and returns all the results in an array when all the promises are resolved.
+//Promise.allSettled() executes multiple promises at the same time and returns all the results in an array when all the promises are resolved or rejected.
+//Promise.race() executes multiple promises at the same time and returns value/error of promise which is resolved/rejected first.
+//Promise.any() executes multiple promises at the same time and returns value of promise which is resolved first. If all the promises are rejected, then it returns AggregateError.
+//Promise.resolve() returns a promise object that is resolved with a given value.
+//Promise.reject() returns a promise object that is rejected with a given value.
+
+let promise5 = new Promise(function (resolve, reject) {
+    setTimeout(function () { resolve("Value 1"); }, 1000);
+});
+
+let promise6 = new Promise(function (resolve, reject) {
+    setTimeout(function () { resolve("Value 2"); }, 2000);
+});
+
+let promise7 = new Promise(function (resolve, reject) {
+    setTimeout(function () { resolve("Value 3"); }, 3000);
+}); 5
+
+let promise8 = new Promise(function (resolve, reject) {
+    setTimeout(function () { reject("Error"); }, 4000);
+});
+
+let promise_all = Promise.all([promise5, promise6, promise7]);
+promise_all.then(function (result) {
+    console.log(result);
+});
+
+let promise_allSettled = Promise.allSettled([promise5, promise6, promise7, promise8]);
+promise_allSettled.then(function (result) {
+    console.log(result);
+});
+
+let promise_race = Promise.race([promise5, promise6, promise7]);
+promise_race.then(function (result) {
+    console.log(result);
+});
+
+let promise_any = Promise.any([promise5, promise6, promise7, promise8]);
+promise_any.then(function (result) {
+    console.log(result);
+});
+
+let promise_resolve = Promise.resolve("Resolved");
+promise_resolve.then(function (result) {
+    console.log(result);
+});
+
+let promise_reject = Promise.reject("Rejected");
+promise_reject.catch(function (result) {
+    console.log(result);
+});
