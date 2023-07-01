@@ -56,3 +56,12 @@ promise3.then(function (result) {
 ).then(function (result) {
     console.log(result);    //60
 });
+
+
+//Promise with multiple handlers
+let promise4 = new Promise(function (resolve, reject) {
+    resolve("Resolved");
+});
+
+promise4.then((result) => { console.log("Promise 4 " + result); });
+promise4.then((result) => { console.log("P4 " + result); });
