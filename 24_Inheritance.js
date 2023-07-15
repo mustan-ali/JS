@@ -17,3 +17,24 @@ class student extends person {
 
 let student1 = new student("John", 20, 1);
 console.log(student1);
+
+
+//Method Overriding
+class animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    speak() {
+        console.log(this.name + ' makes a noise.');
+    }
+}
+
+class dog extends animal {
+    speak() {
+        console.log(this.name + ' barks.');
+    }
+}
+
+let dog1 = new dog('Tommy');
+dog1.speak();   //Tommy barks.
